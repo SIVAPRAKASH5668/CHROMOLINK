@@ -44,13 +44,36 @@ ChronoMint allows anyone to:
 
 ---
 
-## 🛠️ System Architecture
 chrono-mint/
-├── frontend/ # React.js based DApp interface for users
-├── backend/ # Node.js/Express API for wallet linking, scheduling, metadata
-├── contracts/ # Solidity smart contracts (ERC-721/ERC-1155, escrow, automation)
-├── python-agent/ # Python script interfacing Whisper/OpenAI + transcript analysis
-├── eliza-agent/ # AI logic for keyword/topic validation in sessions (Eliza OS based)
+│
+├── frontend/  
+
+│   ├── components/     
+│   ├── pages/          
+│   └── utils/           
+
+│
+├── backend/   
+│   ├── routes/         
+│   ├── services/       
+│   └── db/             
+│
+├── contracts/ 
+│   ├── TimeSlotNFT.sol  
+│   ├── Escrow.sol       
+│   ├── Automation.sol   
+│   └── CCIPHandler.sol  
+│
+├── python-agent/ 
+│   ├── recorder.py      
+│   ├── whisper_ai.py    
+│   └── utils.py         
+│
+└── eliza-agent/  
+    ├── analyzer.py     
+    ├── keywords.json    
+    └── eliza_hooks.py   
+
 
 ---
 
